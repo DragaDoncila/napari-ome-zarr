@@ -15,15 +15,6 @@ from ome_zarr.io import parse_url
 from ome_zarr.reader import Label, Node, Reader
 from ome_zarr.types import LayerData, PathLike, ReaderFunction
 
-try:
-    from napari_plugin_engine import napari_hook_implementation
-except ImportError:
-
-    def napari_hook_implementation(
-        func: Callable, *args: Any, **kwargs: Any
-    ) -> Callable:
-        return func
-
 
 LOGGER = logging.getLogger("napari_ome_zarr.reader")
 
