@@ -31,7 +31,6 @@ LOGGER = logging.getLogger("napari_ome_zarr.reader")
 METADATA_KEYS = ("name", "visible", "contrast_limits", "colormap",
                  "color", "metadata")
 
-@napari_hook_implementation
 def napari_get_reader(path: PathLike) -> Optional[ReaderFunction]:
     """Returns a reader for supported paths that include IDR ID.
 
